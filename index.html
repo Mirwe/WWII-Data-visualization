@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Project - WWII</title>
+   
+    <script type="text/javascript" src="d3/d3.js"></script>
+    <script type="text/javascript" src="d3/d3-selection-multi.js"></script>
+    <script type="text/javascript" src="d3/topojson.js"></script>
+    <script type="text/javascript" src="script/script.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#">WWII</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#">World Map <span class="sr-only">(current)</span></a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a class="nav-link" href="AlliesvsAxis.html">Main Countries</a>
+                    </li> 
+                    <li class="nav-item">
+                      <a class="nav-link" href="militaryTimeline.html"> Timelines</a>
+                    </li>
+      
+                    <li class="nav-item">
+                      <a class="nav-link" href="bombMap.html">Air Bomb Map</a>
+                    </li>             
+                  </ul>               
+                </div>
+        </nav>
+       
+    
+        <div class="float-left" style="padding-left:20px; padding-top: 20px;">
+          <h3>World casualties map </h3>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="total" onchange="drawMap(this.value)" checked>
+            <label class="form-check-label" for="exampleRadios1">
+              Total casualties
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="civilians" onchange="drawMap(this.value)">
+            <label class="form-check-label" for="exampleRadios1">
+              Civilians
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="soldier" onchange="drawMap(this.value)">
+            <label class="form-check-label" for="exampleRadios1">
+              Soldier
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="holocaust" onchange="drawMap(this.value)">
+            <label class="form-check-label" for="exampleRadios2">
+              Holocaust  
+            </label>
+          </div>
+        </div>
+
+        
+
+
+
+        <div class="d-flex justify-content-center" style="padding-top: 20px;" >
+
+            
+            
+                <svg width="950" height="580">
+                        <g id="map"></g>
+                        <g id="points"></g>
+                </svg>
+
+                <svg width="200" height="500" id="legend" >
+                   <rect x="10" y="1" height="220" width="120" style="fill:none;stroke:rgb(0,0,0)"></rect>
+                     <!--<rect x="20" y="5" height="20" width="20" style="fill:rgb(210,251,255); stroke:none;"></rect>
+                    <text x= "43" y="5" text-anchor='start' alignment-baseline='hanging'> 0 - 100</text>
+                    <rect x="20" y="25" height="20" width="20" style="fill:rgb(222,235,247); stroke:none;"></rect>
+                    <text x= "43" y="28" text-anchor='start' font-size="13px" alignment-baseline='hanging'> 100 - 1000</text>-->
+                </svg>
+        </div>
+
+
+
+</body>
+</html>

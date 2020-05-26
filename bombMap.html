@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Project - WWII</title>
+   
+    <script type="text/javascript" src="d3/d3.js"></script>
+    <script type="text/javascript" src="d3/d3-selection-multi.js"></script>
+    <script type="text/javascript" src="d3/topojson.js"></script>
+    <script type="text/javascript" src="script/bomb.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#">WWII</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                      <a class="nav-link" href="index.html">World Map </a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a class="nav-link" href="AlliesvsAxis.html"> Main Countries</a>
+                    </li> 
+                    <li class="nav-item">
+                      <a class="nav-link" href="militaryTimeline.html"> Timelines </a>
+                    </li>     
+                    <li class="nav-item active">
+                      <a class="nav-link" href="bombMap.html">Air Bomb Map <span class="sr-only">(current)</span></a>
+                    </li>       
+                  </ul>               
+                </div>
+        </nav>
+
+        <h3 class="d-flex justify-content-left" style="padding-left:20px; padding-top:20px;">Air Bomb Casualties</h3>
+
+        
+
+            <div id="plot-selector" class="d-flex justify-content-left" style="padding-left:20px; padding-top:20px;">
+                <select id="dataset" onchange="selectPaese(this.options[this.selectedIndex].value, 0)">
+                    <option selected value="Germany">Germany</option>
+                    <option value="United Kingdom">United Kingdom</option>
+                    <option value="Japan">Japan</option>
+
+                </select>
+
+          </div>
+
+          <div class="d-flex justify-content-left" style="padding-left:20px; padding-top:20px;"id="totalDeaths">
+            <!--<svg width="300" height="50">
+              <text x="0" y="20" ></text>
+            </svg>-->
+          </div>
+
+          <div class="d-flex justify-content-left"  style="padding-left:20px; padding-top:20px;" >
+
+            <svg width="650" height="500" id="svg">
+                      
+              <g id="xAxis"></g>
+              <g id="yAxis"></g>
+              <g id="bars"></g>
+              <text x="300" y="330" class="labelBomb" style="font-size: 14px; font-style: italic;">Locations</text>
+              <text x="-170" y="12" transform="rotate(-90)" class="labelBomb" style="font-size: 14px; font-style: oblique;">Bombing victims</text>
+              
+            </svg>
+
+            <svg width="500" height="500">
+                    <g id="map"></g>
+                    <g id="cerchi"></g>
+            </svg>
+          </div>
+  </div>
+
+
+
+</body>
+</html>

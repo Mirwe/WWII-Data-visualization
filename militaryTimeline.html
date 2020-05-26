@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Project - WWII</title>
+   
+    <script type="text/javascript" src="d3/d3.js"></script>
+    <script type="text/javascript" src="d3/d3-selection-multi.js"></script>
+    <script type="text/javascript" src="d3/topojson.js"></script>
+    <script type="text/javascript" src="script/scriptMilitary4.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#">WWII</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                      <a class="nav-link" href="index.html">World Map </a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a class="nav-link" href="AlliesvsAxis.html"> Main Countries</a>
+                    </li> 
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#"> Timelines <span class="sr-only">(current)</span></a>
+                    </li>     
+                    <li class="nav-item">
+                      <a class="nav-link" href="bombMap.html">Air Bomb Map</a>
+                    </li>          
+                  </ul>               
+                </div>
+        </nav>
+
+        <h3 class="d-flex justify-content-left" style="padding-left:20px; padding-top:20px;">Military Timeline Deaths </h3>
+
+        <div class="d-flex justify-content-left" style="padding-left:20px; padding-top:20px;">
+          
+          <div id="plot-selector">
+            <label>Select Country Timeline:</label>
+            <select id="dataset" onchange="createDatiPerPaese(this.options[this.selectedIndex].value/*, 0*/)">
+                <option selected value="Germany">Germany</option>
+                <option value="United States">United States</option>
+                <option value="Soviet Union">Soviet Union</option>
+                <option value="United Kingdom">United Kingdom</option>
+                <option value="Italy">Italy</option>
+                <!--<option value="Poland">Poland</option>
+                <option value="United States">United States</option>
+                <option value="China">China</option>
+                <option value="France">France</option>
+                                
+                <option value="Japan">Japan</option> -->
+                
+            </select>
+
+            <!--<svg width="200" height="100">
+                <text x="0" y="20">Total Dead Soldiers:</text>
+                <text x="0" y="40" id="totalDeaths"></text>
+                <text x="0" y="60">navy:</text>
+                <text x="0" y="80">marines:</text>
+
+              </svg>-->
+        </div>
+
+        </div>
+
+                
+        <!--<svg width="600" height="500">
+                    
+          <g id="xAxis2"></g>
+          <g id="yAxis2"></g>
+          <g id="line" style=" stroke: steelblue;fill: none;"></g>
+      </svg>-->
+                <svg width="1300" height="630">
+                    
+                    <g id="xAxis"></g>
+                    <g id="yAxis"></g>
+                    <g id="lines"></g>
+                    <g id="bars"></g>
+                    <g id="circles"></g>
+                    <!--<image href="image/Arrow.png" x="800" y="200" height="50px" width="50px" id="next"/>
+                    <image href="image/ArrowLeft.png" x="20" y="200" height="50px" width="50px" id="prev" style="display:none"/>-->
+                    
+                </svg>
+
+        </div>
+
+ 
+          
+      
+
+
+
+</body>
+</html>

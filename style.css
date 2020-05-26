@@ -1,0 +1,77 @@
+/*.Soldati{fill:blue;}
+.Civili{fill:lightblue;}*/
+
+.Italy{
+    stroke:red;
+}
+.Soviet Union{
+    stroke:green;
+}
+.Germany{
+    stroke:black;
+}
+.United Kingdom{
+    stroke:blue;
+}
+
+.countries {
+    stroke: #f7f7f7;
+    stroke-width: 0.3px;
+}
+
+div.tooltip { 
+    position: absolute;     
+      
+    padding: 10px;       
+    font: 12px sans-serif;    
+    background: black; 
+    color:white;
+    border: 0px;        
+    pointer-events: none;     
+}
+.textImp{
+    color:orange;
+    font-weight: bold;
+}
+
+.textNation{
+    color:white;
+    font-weight: bold;
+    font-size:14px;
+}
+
+.textImp2{
+    color:red;
+    font-weight: bold;
+    font-size:14px;
+}
+
+
+
+.tick{
+    font-size:12px;
+
+}
+.key-dot {
+    display: inline-block;
+    height: 15px;
+    margin-right: .5em;
+    width: 15px;
+}
+
+.legend {
+    margin-left:20px;
+}
+
+#lines line {
+    stroke:lightgray;
+}
+#lines path {
+    stroke:none;
+}
+
+
+.legend rect {
+    fill:white;
+    stroke:black;
+    opacity:0.8;}
